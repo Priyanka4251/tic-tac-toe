@@ -67,6 +67,9 @@ img{
     font-family: 'Palette Mosaic', cursive;
 
 }
+.imgLoss{
+    display: none;
+}
 @media screen and (max-width:800px) {
     .gameContainer{
         flex-wrap: wrap;

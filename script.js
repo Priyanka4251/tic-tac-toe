@@ -23,7 +23,19 @@ const checkWin = ()=>{
             document.querySelector(".info").innerText = boxtext[e[0]].innerText + "-won 🤩"
             isgameover = true;
             document.querySelector("img").style.display= "inline-block";
-        }
+        
+         }else
+        if ((boxtext[e[0]].innerText != boxtext[e[1]].innerText) ||(boxtext[e[1]].innerText != boxtext[e[2]].innerText) || (boxtext[e[2]].innerText != boxtext[e[0]].innerText)) {
+            
+             console.log("draw");
+             if(isgameover == false){
+                 document.querySelector(".info").innerHTML = `<li> Turn for ${turn} </li> no one till won this match`
+             }
+             isgameover = true;
+            
+        
+        
+         }
     })
 
 }
@@ -41,9 +53,10 @@ Array.from(boxes).forEach(element => {
             if(isgameover == false){
                 document.getElementsByClassName("info")[0].innerText = `Turn for ${turn}`;
             }
-            
         }
+
     })
+
 })
 ////////////////////reset/////////////////////////////////////
 let reset = document.querySelector("#reset");
@@ -57,3 +70,13 @@ reset.addEventListener("click",() =>{
     document.querySelector(".info").innerText = `Turn for ${turn}`
     document.querySelector("img").style.display= "none"
 })
+//////////////////draw////////////////////////////////
+const draw = () =>{
+    let drawArray= [
+        []
+    ]
+}
+
+//////////////////////////////////////
+
+
