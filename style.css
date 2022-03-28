@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+    font-family: 'Palette Mosaic', cursive;
+    font-size: 20px;
+}
+nav{
+    margin-top: 8px;
+    background-image:linear-gradient(black, purple) ; 
+    color: white;
+    display: flex;
+    height: 48px;
+    border-radius: 0 20%;
+    align-items: center;
+}
+#name{
+    position: absolute;
+    margin-left: 34vw;
+}
+.gameContainer{
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns:repeat(3, 10vw) ;
+    font-family: 'Palette Mosaic', cursive;
+}
+img{
+    border-radius: 90%;
+    width: 15vw;
+    height: 18vh;
+    display: none;
+}
+.box{
+    border: 2px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+}
+.box:hover{
+    background-color: rgb(150, 140, 150);
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.info{
+    color: purple;
+    font-family: 'Palette Mosaic', cursive;
+
+}
+@media screen and (max-width:800px) {
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .box{
+        font-size: 28px;
+
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+}
